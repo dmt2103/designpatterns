@@ -2,104 +2,73 @@
 
 namespace Decorator
 {
-    /// <summary>
-    /// Decorator Design Pattern
-    /// </summary>
-
     public class Program
     {
         public static void Main(string[] args)
         {
-            // Create ConcreteComponent and two Decorators
+            IBubbleTea bubbleTea = new BubbleTea();
 
-            ConcreteComponent c = new ConcreteComponent();
-            ConcreteDecoratorA d1 = new ConcreteDecoratorA();
-            ConcreteDecoratorB d2 = new ConcreteDecoratorB();
+            IBubbleTea pearl = new PearlBubbleTea();
+            IBubbleTea cheese = new CheeseBubbleTea();
 
-            // Link decorators
-
-            d1.SetComponent(c);
-            d2.SetComponent(d1);
-
-            d2.Operation();
-
-            // Wait for user
-
-            Console.ReadKey();
+            Console.WriteLine(cheese.Type());
+            Console.WriteLine("Price = " + cheese.Price());
+            Console.ReadLine();
         }
     }
 
-    /// <summary>
-    /// The 'Component' abstract class
-    /// </summary>
-
-    public abstract class Component
+    // Base interface
+    public interface IBubbleTea
     {
-        public abstract void Operation();
+        string Type();
+        int Price();
     }
 
-    /// <summary>
-    /// The 'ConcreteComponent' class
-    /// </summary>
-
-    public class ConcreteComponent : Component
+    // Concrete implementation
+    public class BubbleTea : IBubbleTea
     {
-        public override void Operation()
+        public virtual string Type()
         {
-            Console.WriteLine("ConcreteComponent.Operation()");
-        }
-    }
-
-    /// <summary>
-    /// The 'Decorator' abstract class
-    /// </summary>
-
-    public abstract class Decorator : Component
-    {
-        protected Component component;
-
-        public void SetComponent(Component component)
-        {
-            this.component = component;
+            return "Bubble tea";
         }
 
-        public override void Operation()
+        public virtual int Price()
         {
-            if (component != null)
-            {
-                component.Operation();
-            }
+            return 100;
         }
     }
 
-    /// <summary>
-    /// The 'ConcreteDecoratorA' class
-    /// </summary>
-
-    public class ConcreteDecoratorA : Decorator
+    public class PearlBubbleTea : BubbleTea
     {
-        public override void Operation()
+        public override string Type()
         {
-            base.Operation();
-            Console.WriteLine("ConcreteDecoratorA.Operation()");
+            var type = base.Type();
+            type += "\n + boba pearls";
+            return type;
+        }
+
+        public override int Price()
+        {
+            var price = base.Price();
+            price += 20;
+            return price;
         }
     }
 
-    /// <summary>
-    /// The 'ConcreteDecoratorB' class
-    /// </summary>
-
-    public class ConcreteDecoratorB : Decorator
+    public class CheeseBubbleTea : BubbleTea
     {
-        public override void Operation()
+        public override string Type()
         {
-            base.Operation();
-            AddedBehavior();
-            Console.WriteLine("ConcreteDecoratorB.Operation()");
+            var type = base.Type();
+            type += "\n + cheese";
+            return type;
         }
 
-        void AddedBehavior()
+        public override int Price()
         {
+            var price = base.Price();
+            price += 25;
+            return price;
         }
     }
 }

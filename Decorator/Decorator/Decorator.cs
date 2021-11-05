@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Decorator.Demo
+namespace Decorator
 {
-    public class Program
+    public class Decorator
     {
         public static void Main(string[] args)
         {
@@ -62,7 +62,7 @@ namespace Decorator.Demo
         }
     }
 
-    // concrete decorators
+    // Concrete decorators
     public class PearlDecorator : BubbleTeaDecorator
     {
         public PearlDecorator(IBubbleTea bubbleTea) : base(bubbleTea) { }
