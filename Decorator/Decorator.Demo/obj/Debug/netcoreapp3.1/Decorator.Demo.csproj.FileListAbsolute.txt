@@ -1,0 +1,14 @@
+D:\Projects\designpatterns\Decorator\Decorator.Demo\bin\Debug\netcoreapp3.1\Decorator.Demo.exe
+D:\Projects\designpatterns\Decorator\Decorator.Demo\bin\Debug\netcoreapp3.1\Decorator.Demo.deps.json
+D:\Projects\designpatterns\Decorator\Decorator.Demo\bin\Debug\netcoreapp3.1\Decorator.Demo.runtimeconfig.json
+D:\Projects\designpatterns\Decorator\Decorator.Demo\bin\Debug\netcoreapp3.1\Decorator.Demo.runtimeconfig.dev.json
+D:\Projects\designpatterns\Decorator\Decorator.Demo\bin\Debug\netcoreapp3.1\Decorator.Demo.dll
+D:\Projects\designpatterns\Decorator\Decorator.Demo\bin\Debug\netcoreapp3.1\Decorator.Demo.pdb
+D:\Projects\designpatterns\Decorator\Decorator.Demo\obj\Debug\netcoreapp3.1\Decorator.Demo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\designpatterns\Decorator\Decorator.Demo\obj\Debug\netcoreapp3.1\Decorator.Demo.AssemblyInfoInputs.cache
+D:\Projects\designpatterns\Decorator\Decorator.Demo\obj\Debug\netcoreapp3.1\Decorator.Demo.AssemblyInfo.cs
+D:\Projects\designpatterns\Decorator\Decorator.Demo\obj\Debug\netcoreapp3.1\Decorator.Demo.csproj.CoreCompileInputs.cache
+D:\Projects\designpatterns\Decorator\Decorator.Demo\obj\Debug\netcoreapp3.1\Decorator.Demo.dll
+D:\Projects\designpatterns\Decorator\Decorator.Demo\obj\Debug\netcoreapp3.1\Decorator.Demo.pdb
+D:\Projects\designpatterns\Decorator\Decorator.Demo\obj\Debug\netcoreapp3.1\Decorator.Demo.genruntimeconfig.cache
+D:\Projects\designpatterns\Decorator\Decorator.Demo\obj\Debug\netcoreapp3.1\Decorator.Demo.csproj.AssemblyReference.cache
