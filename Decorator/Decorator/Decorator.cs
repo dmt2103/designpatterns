@@ -6,13 +6,13 @@ namespace Decorator
     {
         public static void Main(string[] args)
         {
-            // Decorator design pattern
-            IBubbleTea bubbleTea = new BubbleTea();
+            var bubbleTea = new BubbleTea();
 
-            IBubbleTea pearl = new PearlDecorator(bubbleTea);
-            IBubbleTea cheese = new CheeseDecorator(pearl);
-            IBubbleTea jelly = new JellyDecorator(cheese);
-            IBubbleTea pudding = new PuddingDecorator(jelly);
+            var pearl = new PearlDecorator(bubbleTea);
+            //pearl.Grill();
+            var cheese = new CheeseDecorator(pearl);
+            var jelly = new JellyDecorator(cheese);
+            var pudding = new PuddingDecorator(jelly);
 
             Console.WriteLine(pudding.Type());
             Console.WriteLine("Price = " + pudding.Price());
@@ -71,6 +71,12 @@ namespace Decorator
         {
             var type = base.Type();
             type += "\n + boba pearls";
+
+            if (IsGrill)
+            {
+                type += " (grill)";
+            }
+
             return type;
         }
 
@@ -78,7 +84,20 @@ namespace Decorator
         {
             var price = base.Price();
             price += 20;
+
+            if (IsGrill)
+            {
+                price += 10;
+            }
+
             return price;
+        }
+
+        public bool IsGrill { get; set; }
+
+        public void Grill()
+        {
+            IsGrill = true;
         }
     }
 

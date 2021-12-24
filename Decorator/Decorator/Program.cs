@@ -6,10 +6,10 @@ namespace Decorator
     {
         public static void Main(string[] args)
         {
-            IBubbleTea bubbleTea = new BubbleTea();
+            var bubbleTea = new BubbleTea();
 
-            IBubbleTea pearl = new PearlBubbleTea();
-            IBubbleTea cheese = new CheeseBubbleTea();
+            var pearl = new PearlBubbleTea();
+            var cheese = new CheeseBubbleTea();
 
             Console.WriteLine(cheese.Type());
             Console.WriteLine("Price = " + cheese.Price());

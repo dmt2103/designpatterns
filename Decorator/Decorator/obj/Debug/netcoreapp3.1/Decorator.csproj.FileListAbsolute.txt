@@ -24,3 +24,4 @@ D:\Projects\designpatterns\Decorator\Decorator\obj\Debug\netcoreapp3.1\Decorator
 D:\Projects\designpatterns\Decorator\Decorator\obj\Debug\netcoreapp3.1\Decorator.dll
 D:\Projects\designpatterns\Decorator\Decorator\obj\Debug\netcoreapp3.1\Decorator.pdb
 D:\Projects\designpatterns\Decorator\Decorator\obj\Debug\netcoreapp3.1\Decorator.genruntimeconfig.cache
+D:\Projects\designpatterns\Decorator\Decorator\obj\Debug\netcoreapp3.1\Decorator.csproj.AssemblyReference.cache
